@@ -2,9 +2,11 @@ package ru.smak
 
 import ru.smak.ui.MainFrame
 
-fun main(args: Array<String>) {
+
+fun main() {
     MainFrame().apply {
         isVisible = true
     }
+
 }
 

@@ -1,0 +1,27 @@
+Index: src/main/kotlin/ru/smak/ui/MainFrame.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/kotlin/ru/smak/ui/MainFrame.kt b/src/main/kotlin/ru/smak/ui/MainFrame.kt
+--- a/src/main/kotlin/ru/smak/ui/MainFrame.kt	(revision aed2ceb31c441286be1b3e5abfd7acbd12934048)
++++ b/src/main/kotlin/ru/smak/ui/MainFrame.kt	(revision 469e48b6ea442f6698a1a8b4788284a1b386fbf6)
+@@ -24,6 +24,7 @@
+             CartesianPlane(-2.0, 1.0, -1.0, 1.0),
+             colorizers[Random.nextInt(colorizers.size)])
+ 
++
+         fractalPanel = SelectablePanel(painter).apply {
+             background = Color.WHITE
+             addSelectListener{
+@@ -37,6 +38,10 @@
+                 }
+                 repaint()
+             }
++
++            addMandelbrotListener {
++                mand.changeIterations()
++            }
+         }
+         
+         layout = GroupLayout(contentPane).apply {
